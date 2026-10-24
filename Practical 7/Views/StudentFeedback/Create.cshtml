@@ -1,0 +1,75 @@
+﻿@model Practical_7.Models.Feedback
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+    @using (Html.BeginForm())
+    {
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr>
+                <td>
+                    @Html.LabelFor(v => v.EnrollmentNo)
+                </td>
+                <td>
+                    @Html.EditorFor(v => v.EnrollmentNo)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(v => v.Name)
+                </td>
+                <td>
+                    @Html.EditorFor(v => v.Name)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(v => v.Subject)
+                </td>
+                <td>
+                    @Html.EditorFor(v => v.Subject)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(v => v.Rating)
+                </td>
+                <td>
+                    @Html.EditorFor(v => v.Rating)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(v => v.Comments)
+                </td>
+                <td>
+                    @Html.TextAreaFor(v => v.Comments)
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit Feedback" />
+                </td>
+            </tr>
+        </table>
+    }
+
+    @Html.ActionLink("Back to Home", "Index", "StudentFeedback")
+
+
+</body>
+</html>
